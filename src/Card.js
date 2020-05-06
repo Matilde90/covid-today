@@ -1,10 +1,11 @@
 import React from 'react'
 import germoglio from './img/germoglio.jpg'
 
-const Card = (props) => {
+const Card = ({id, name, claim, philosopher}) => {
+
   return (
     <div className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-7'>
-      <h1>{props.name}</h1>
+      <h1>{name}</h1>
       <img
         src={germoglio}
         alt='germoglio'
@@ -12,8 +13,10 @@ const Card = (props) => {
         width='150'
         className='center'
       />
-      <p>{props.claim}</p>
-      <p>{props.philosopher}</p>
+      <h3>Main claim:</h3>
+      <p>{claim}</p>
+      <h3>Philosopher:</h3>
+      <p>{philosopher}</p>
     </div>
   )
 }

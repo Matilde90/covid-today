@@ -25,7 +25,7 @@ export const theories = [
 },
 {
     id: 5,
-    name: 'Attitude Theory',
+    name: 'Attitudinal Theory',
     claim: 'Emotions are attitude',
     philosopher: 'Julien Deonna & Fabrice Teroni',
 },
