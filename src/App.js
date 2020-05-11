@@ -7,19 +7,19 @@ class App extends Component {
     constructor(){
         super()
         this.state ={
-            robots: 'robots',
+            theories: 'theories',
             searchfield: ''
-          }
+        }
     }
-  render () {
+    render () {
     return (
-      <div className='tc'>
+    <div className='tc'>
         <h1>Theories of emotions</h1>
         <SearchBox />
         <CardList theories={theories} />
-      </div>
+    </div>
     )
-  }
+    }
 }
 
 export default App
