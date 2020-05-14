@@ -7,7 +7,7 @@ const SearchBox = (searchfield, searchChange) => {
                 type='search'
                 placeholder='search a theory of emotion'
                 className='pa3 bab--green bg-lightest-blue'
-                onChange={searchChange}
+                onChange={() => searchChange }
         />
         </div>
     );

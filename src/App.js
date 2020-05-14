@@ -13,9 +13,9 @@ class App extends Component {
     }
 
     onSearchChange = (event) => {
-        const searchfield = event.target.value
-        this.setState(()=> ({searchfield: searchfield}))
         console.log(event.target.value);
+        const searchfield = event.target.value
+        this.setState(()=> ({searchfield}))
     }
 
     render() {
