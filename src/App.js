@@ -13,6 +13,13 @@ class App extends Component {
         }
     }
 
+    // componentDidMount("https://api.covid19api.com/summary") {
+    //     this.setState({ theories: theories })
+    //     fetch()
+    //         .then(response => response.json())
+    //         .then((Countries) => this.setState({theories: Countries.Country[0]}))
+    // }
+
     onSearchChange = (event) => {
         console.log(event.target.value);
         const searchfield = event.target.value
