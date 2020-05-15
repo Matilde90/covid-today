@@ -3,6 +3,7 @@ import CardList from '../components/CardList'
 import { theories } from '../theories.js'
 import SearchBox from '../components/SearcBox'
 import './App.css'
+import ErrorBoundry from '../components/ErrorBoundry'
 
 class App extends Component {
     constructor() {
@@ -30,7 +31,9 @@ class App extends Component {
                 <div className='tc'>
                     <h1 className='title'>Theories of emotions</h1>
                     <SearchBox searchChange={this.onSearchChange} />
+                    <ErrorBoundry>
                     <CardList theories={filteredTheories} />
+                    </ErrorBoundry>
                 </div>
             )
     }
