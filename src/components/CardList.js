@@ -8,10 +8,11 @@ const CardList = ({ countries }) => {
                 countries.map((country, i) => {
                     return <Card
                         key={i}
-                        id={country.Country}
-                        name={country.Country}
-                        claim={country.newConfirmed}
-                        philosopher={country.TotalConfirmed} 
+                        countryName={country.Country}
+                        totalConfirmed={country.TotalConfirmed}
+                        newConfirmed={country.NewConfirmed}
+                        newDeaths={country.NewDeaths}
+                        totalDeaths={country.TotalDeaths}
                         />
                 })
             }
