@@ -13,6 +13,7 @@ const CardList = ({ countries }) => {
                         newConfirmed={country.NewConfirmed}
                         newDeaths={country.NewDeaths}
                         totalDeaths={country.TotalDeaths}
+                        countryCode={country.CountryCode}
                         />
                 })
             }
