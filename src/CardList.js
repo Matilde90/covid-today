@@ -1,7 +1,5 @@
 import React from 'react';
 import Card from './Card';
-import { theories } from './theories.js';
-
 
 const CardList = ({ theories }) => {
     return (

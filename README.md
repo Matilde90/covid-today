@@ -56,3 +56,14 @@ attach to the existing container
 
 ---
 git push -u origin HEAD
+
+## Example of interactive code using api:
+  
+  ```js
+  componentDidMount() {
+        this.setState({ theories: theories })
+        fetch("https://api.covid19api.com/summary")
+            .then(response => response.json())
+            .then((response) => console.log(response.Global.NewConfirmed))
+    }
+  ```
