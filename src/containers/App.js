@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import CardList from './CardList'
-import { theories } from './theories.js'
-import SearchBox from './SearcBox'
+import CardList from '../components/CardList'
+import { theories } from '../theories.js'
+import SearchBox from '../components/SearcBox'
 import './App.css'
 
 class App extends Component {

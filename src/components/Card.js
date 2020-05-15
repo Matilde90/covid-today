@@ -1,5 +1,5 @@
 import React from 'react'
-import germoglio from './img/germoglio.jpg'
+import germoglio from '../img/germoglio.jpg'
 
 const Card = ({id, name, claim, philosopher}) => {
 
