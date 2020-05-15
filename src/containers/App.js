@@ -37,7 +37,10 @@ class App extends Component {
             <h1>Loading</h1> :
             (
                 <div className='tc'>
-                    <h1 className='title'>Covid-19 data per country</h1>
+                    <header>
+                        <h1 className='title'>Today's Covid-19 data</h1>
+                        <h3>Data sourced from Johns Hopkins CSSE through <a href="https://covid19api.com"> Covid19api</a></h3>
+                    </header>
                     <SearchBox searchChange={this.onSearchChange} />
                     <ErrorBoundry>
                     <CardList countries={filteredCountries} />
