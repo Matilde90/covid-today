@@ -3,7 +3,6 @@ import CardList from './CardList'
 import { theories } from './theories.js'
 import SearchBox from './SearcBox'
 import './App.css'
-import Scroll from './Scroll'
 
 class App extends Component {
     constructor() {
@@ -31,9 +30,7 @@ class App extends Component {
                 <div className='tc'>
                     <h1 className='title'>Theories of emotions</h1>
                         <SearchBox searchChange={this.onSearchChange} />
-                    <Scroll>
                         <CardList theories={filteredTheories} />
-                    </Scroll>
                 </div>
             )
         }
