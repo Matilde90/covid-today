@@ -20,10 +20,11 @@ class App extends Component {
     }
 
     render() {
-        const filteredTheories = this.state.theories.filter(theory => {
-            return theory.name.toLowerCase().includes(this.state.searchfield.toLowerCase())
+        const { theories, searchfield} = this.state
+        const filteredTheories = theories.filter(theory => {
+            return theory.name.toLowerCase().includes(searchfield.toLowerCase())
         })
-        if (this.state.theories.length == 0) {
+        if (theories.length == 0) {
             return <h1>Loading</h1>
         } else {
             return (
