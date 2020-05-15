@@ -16,25 +16,23 @@ class App extends Component {
     onSearchChange = (event) => {
         console.log(event.target.value);
         const searchfield = event.target.value
-        this.setState(()=> ({searchfield}))
+        this.setState(() => ({ searchfield }))
     }
 
     render() {
-        const { theories, searchfield} = this.state
+        const { theories, searchfield } = this.state
         const filteredTheories = theories.filter(theory => {
             return theory.name.toLowerCase().includes(searchfield.toLowerCase())
         })
-        if (theories.length == 0) {
-            return <h1>Loading</h1>
-        } else {
-            return (
+        return !theories.length ?
+            <h1>Loading</h1> :
+            (
                 <div className='tc'>
                     <h1 className='title'>Theories of emotions</h1>
-                        <SearchBox searchChange={this.onSearchChange} />
-                        <CardList theories={filteredTheories} />
+                    <SearchBox searchChange={this.onSearchChange} />
+                    <CardList theories={filteredTheories} />
                 </div>
             )
-        }
     }
 }
 
