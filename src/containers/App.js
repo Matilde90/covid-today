@@ -1,9 +1,23 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux';
 import CardList from '../components/CardList'
 import SearchBox from '../components/SearcBox'
-import './App.css'
 import ErrorBoundry from '../components/ErrorBoundry'
+import './App.css'
 
+import { setSearchField } from '../actions.js'
+
+const mapStateToProps = state => {
+    return {
+        searchfield: state.searchCountry.searchfield
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+    onSearchChange: (event) => dispatch(setSearchField(event.target.value))
+    }
+}
 
 class App extends Component {
     constructor() {
@@ -44,11 +58,11 @@ class App extends Component {
                     </header>
                     <SearchBox searchChange={this.onSearchChange} />
                     <ErrorBoundry>
-                    <CardList countries={filteredCountries} />
+                        <CardList countries={filteredCountries} />
                     </ErrorBoundry>
                 </div>
             )
     }
 }
 
-export default App
+export default connect(mapStateToProps, mapDispatchToProps)(App)
