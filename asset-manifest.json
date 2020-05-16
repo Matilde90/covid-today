@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/CovidToday/static/css/main.3b3100e5.chunk.css",
+    "main.js": "/CovidToday/static/js/main.62570fea.chunk.js",
+    "main.js.map": "/CovidToday/static/js/main.62570fea.chunk.js.map",
+    "runtime-main.js": "/CovidToday/static/js/runtime-main.3aa1904a.js",
+    "runtime-main.js.map": "/CovidToday/static/js/runtime-main.3aa1904a.js.map",
+    "static/css/2.036b41f9.chunk.css": "/CovidToday/static/css/2.036b41f9.chunk.css",
+    "static/js/2.59207e8d.chunk.js": "/CovidToday/static/js/2.59207e8d.chunk.js",
+    "static/js/2.59207e8d.chunk.js.map": "/CovidToday/static/js/2.59207e8d.chunk.js.map",
+    "index.html": "/CovidToday/index.html",
+    "precache-manifest.eb46529be362f8ca3d871eaff92e7d12.js": "/CovidToday/precache-manifest.eb46529be362f8ca3d871eaff92e7d12.js",
+    "service-worker.js": "/CovidToday/service-worker.js",
+    "static/css/2.036b41f9.chunk.css.map": "/CovidToday/static/css/2.036b41f9.chunk.css.map",
+    "static/css/main.3b3100e5.chunk.css.map": "/CovidToday/static/css/main.3b3100e5.chunk.css.map",
+    "static/js/2.59207e8d.chunk.js.LICENSE.txt": "/CovidToday/static/js/2.59207e8d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3aa1904a.js",
+    "static/css/2.036b41f9.chunk.css",
+    "static/js/2.59207e8d.chunk.js",
+    "static/css/main.3b3100e5.chunk.css",
+    "static/js/main.62570fea.chunk.js"
+  ]
+}
