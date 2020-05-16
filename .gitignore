@@ -24,3 +24,4 @@ yarn-error.log*
 
 coverage
 .history
+__notes__.md
