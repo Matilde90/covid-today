@@ -1,7 +1,7 @@
 # Covid Today
 
 I am learning React following Andrei Nagonie's Udemy course [The complete junior to senior web developer roadmap](https://www.udemy.com/course-dashboard-redirect/?course_id=1650610). I built this simple webpage as an exercise.
-When a user visits the page, they will see the daily Covid-19 data. 
+When a user visits the page, they will see the daily Covid-19 data.
 This page sources data from Johns Hopkins CSSE through [Covid19api](https://covid19api.com").
 
 ## Dev Deployment
