@@ -4,6 +4,7 @@ import SearchBox from '../components/SearcBox'
 import './App.css'
 import ErrorBoundry from '../components/ErrorBoundry'
 
+
 class App extends Component {
     constructor() {
         super()
