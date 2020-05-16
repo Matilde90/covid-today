@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import CardList from '../components/CardList'
-import { theories } from '../theories.js'
 import SearchBox from '../components/SearcBox'
 import './App.css'
 import ErrorBoundry from '../components/ErrorBoundry'
@@ -9,7 +8,7 @@ class App extends Component {
     constructor() {
         super()
         this.state = {
-            theories: theories,
+            countries: [],
             searchfield: ''
         }
     }
@@ -20,19 +19,31 @@ class App extends Component {
         this.setState(() => ({ searchfield }))
     }
 
+    componentDidMount() {
+        fetch("https://api.covid19api.com/summary")
+            .then(response => response.json())
+            .then((data) => {
+                console.log(data.Global.NewConfirmed)
+                return this.setState({ countries: data.Countries })
+            })
+    }
+
     render() {
-        const { theories, searchfield } = this.state
-        const filteredTheories = theories.filter(theory => {
-            return theory.name.toLowerCase().includes(searchfield.toLowerCase())
+        const { countries, searchfield } = this.state
+        const filteredCountries = countries.filter(country => {
+            return country.Country.toLowerCase().includes(searchfield.toLowerCase())
         })
-        return !theories.length ?
+        return !countries.length ?
             <h1>Loading</h1> :
             (
                 <div className='tc'>
-                    <h1 className='title'>Theories of emotions</h1>
+                    <header>
+                        <h1 className='title'>Today's Covid-19 data</h1>
+                        <h3>Data sourced from Johns Hopkins CSSE through <a href="https://covid19api.com"> Covid19api</a></h3>
+                    </header>
                     <SearchBox searchChange={this.onSearchChange} />
                     <ErrorBoundry>
-                    <CardList theories={filteredTheories} />
+                    <CardList countries={filteredCountries} />
                     </ErrorBoundry>
                 </div>
             )

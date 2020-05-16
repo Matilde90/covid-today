@@ -1,17 +1,19 @@
 import React from 'react';
 import Card from './Card';
 
-const CardList = ({ theories }) => {
+const CardList = ({ countries }) => {
     return (
         <div>
             {
-                theories.map((theory, i) => {
+                countries.map((country, i) => {
                     return <Card
                         key={i}
-                        id={theory.id}
-                        name={theory.name}
-                        claim={theory.claim}
-                        philosopher={theory.philosopher} 
+                        countryName={country.Country}
+                        totalConfirmed={country.TotalConfirmed}
+                        newConfirmed={country.NewConfirmed}
+                        newDeaths={country.NewDeaths}
+                        totalDeaths={country.TotalDeaths}
+                        countryCode={country.CountryCode}
                         />
                 })
             }
